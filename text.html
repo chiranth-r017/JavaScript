@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sample">
+        <p><b>This is first para</b></p>
+        <p style="display: none;">  This is hidden para</p>
+    </div>
+
+    <script>
+        sampleDiv = document.getElementById("sample");
+        console.log(sampleDiv.innerText);
+        console.log(sampleDiv.textContent);
+        console.log(sampleDiv.innerHTML);
+        // sampleDiv.innerHTML = "<b>Bold Content</b>";
+    </script>
+</body>
+</html>

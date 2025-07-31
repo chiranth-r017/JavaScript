@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Events: click, dblclick, mouseover, mouseout, keydown, keyup, scroll, focus, submit -->
+     <!-- Event Handlers will be attached in html elements: onclick, ondblclick, onmouseover -->
+    <h1 id="heading">This is a heading</h1>
+    <!-- <button id="click" onclick="cText()" ondblclick="dblClick()" onmouseover="mouseHover()" onmouseout="mouseOut()" >Click here!</button> -->
+    <button id="btnClick" onclick="changeText()" ondblclick="textChange()" onmouseover="mouseHovered()" onmouseout="mouseLeft()">Click here!</button>
+    <!-- onclick & ondblclick are the event handlers for button element -->
+    <script>
+        h1Element = document.getElementById("heading");
+        function changeText(){
+            h1Element.innerHTML = "Heading has been changed as you've clicked on the button";
+            console.log("Button has been clicked!");
+            }
+        
+        function textChange(){
+            h1Element.innerHTML = "Heading modified by Double Click event";
+            console.log("Button has been clicked twice!");
+        }
+        function mouseHovered(){
+            h1Element.innerHTML = "Mouse has been hovered on the button";
+            console.log("Mouse has entered the button!");
+        }
+        function mouseLeft(){
+            h1Element.innerHTML = "Mouse has been left the button";
+            console.log("Mouse has left the button!");
+        }
+    </script>
+</body>
+</html>

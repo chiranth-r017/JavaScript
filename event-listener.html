@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="height: 1000px;">
+    <h1 id="heading"></h1>
+    <button id="btnClick">Click here!</button>
+    <script>
+        heading1 = document.getElementById("heading");
+        buttonElement = document.getElementById("btnClick");
+        // Syntax for adding event listener
+        // element.addEventListener('event', function(){
+            // function definition or action to be performed
+            // });
+            buttonElement.addEventListener('click', function(){
+                heading1.innerHTML = "Heading Changed by <i>Click</i> Event";
+                // heading1.style.color = "red";
+                console.log("Button Clicked!");
+            });
+            buttonElement.addEventListener('dblclick', function(){
+            // heading1.innerHTML = "Heading Changed by <i>Click</i> Event";
+            heading1.style.color = "red";
+            console.log("Button Double Clicked!");
+        });
+        buttonElement.addEventListener('mouseover', function(){
+            heading1.innerHTML = "Heading Changed by <i>Mouse Over</i> Event";
+            heading1.style.color = "blue";
+            console.log("Mouse has been Hovered!");
+        });
+        buttonElement.addEventListener('mouseout', function(){
+            heading1.innerHTML = "Heading Changed by <i>Mouse Out</i> Event";
+            heading1.style.color = "red";
+            console.log("Mouse has been removed!");
+        });
+        buttonElement.addEventListener('mousemove', function(){
+            heading1.innerHTML = "Heading Changed by <i>Mouse Move</i> Event";
+            heading1.style.color = "brown";
+            console.log("Mouse is continously moving!");
+        });
+        buttonElement.addEventListener('mousedown', function(){
+            heading1.innerHTML = "Heading Changed by <i>Mouse Down</i> Event";
+            heading1.style.color = "green";
+            console.log("Mouse clicked and still kept!");
+        });
+        buttonElement.addEventListener('mouseleave', function(){
+            heading1.innerHTML = "Heading Changed by <i>Mouse Leave</i> Event";
+            heading1.style.color = "yellow";
+            console.log("Mouse has been released!");
+        });
+        
+        window = document.window;
+        console.log(window);
+        window.addEventListener('load', function(){
+            heading1.innerHTML = "This is a heading was added as you've loaded the page";
+            console.log("Page Loaded");
+        })
+        window.addEventListener('scroll', function(){
+            heading1.innerHTML = "Page Scrolled";
+            console.log("Page Scrolled");
+        })
+        window.addEventListener('resize', function(){
+            heading1.innerHTML = "Page Resized";
+            console.log("Page Resized");
+        })
+        window.addEventListener('keyup', function(e){
+            console.log(e);
+            console.log("KeyCode:",e.code);
+            console.log("Which Key:",e.key);
+            console.log("Is Ctrl Key clicked:",e.ctrlKey);
+        });
+        </script>
+</body>
+</html>

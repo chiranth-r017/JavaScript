@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div id="box-1"></div>
+    <h1 class="class-mini class-major" id="heading"></h1>
+    <script>
+        boxDiv = document.getElementById("box");
+        boxDiv.innerText = "Text added using <b>DOM</b> - innerText";
+        console.log(boxDiv);
+        console.log(boxDiv.innerText);
+        box1Div = document.getElementById("box-1");
+        box1Div.textContent = "Text added using <b>DOM</b> - textContent";
+        console.log(boxDiv.textContent);
+        box1Div.innerHTML = "Text added using <b>DOM</b> - <i>innerHTML</i>";
+
+        heading = document.getElementById("heading");
+        span = document.createElement("span");
+        // span=document.createElement("span");
+        // innerHTML,innerText,textContent heading.append(span);
+        heading.append(span);
+
+        body = document.querySelector("body");
+        unorderedList = document.createElement("ul");
+        listItem = document.createElement("li");
+        body.append(unorderedList); // append method an be used to add both element as well as text
+        unorderedList.append("Text within UL"); // We can add text also 
+        body.appendChild(unorderedList); // append child can be used to add only elements
+        // body.appendChild("Text within body"); // This will cause error as we are trying to add the text using append child
+        // unorderedList.append("This is a unordered list within body");
+        unorderedList.append(listItem);
+        listItem.innerHTML = "<b>List Item 1</b>";
+        // listItem.remove(); // remove method is used to remove the element which was appended earlier
+        // unorderedList.removeChild(listItem); // refer the parent and remove its child element
+        // body.removeChild(unorderedList);
+        // Syntax: element.setAttribute("attribute", "value")
+        listItem.setAttribute("class", "list-item");
+        listItem.classList.add("class-1", "class-2");
+        listItem.classList.remove("list-item");
+        // listItem.class = "list-item";
+        listItem.setAttribute("id", "item-1");
+        console.log("ID contains:",listItem.getAttribute("id"));
+        // listItem.id = "item-1";
+        listItem.setAttribute("title", "This is the first list item");
+        // Syntax: element.getAttribute("attribute")
+        console.log("Title contains:",listItem.getAttribute("title"));
+        listItem.removeAttribute("title");
+        unorderedList.classList.add("ul-tag");
+        // Syntax: element.toggleAttribute("attribute") : It will add the new attribute if it doesn't exist or removes if it already exist
+        unorderedList.toggleAttribute("hidden");
+        listItem.style.backgroundColor = "red";
+        console.log("Attributes of li:",listItem.attributes.style);
+        console.log(listItem.classList);
+    </script>
+</body>
+
+</html>

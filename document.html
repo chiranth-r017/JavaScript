@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1:first-child {
+            scale: 1.5;
+            position: relative;
+            left: 449px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Heading 1</h1>
+    <h1 class="heading">Heading with Class 1</h1>
+    <h2 class="heading">Heading with Class</h2>
+    <h1 id="heading">Heading with ID</h1>
+    <p class="para">First Paragraph</p>
+    <p class="para-2">Second Paragraph</p>
+    <span class="para">Paragraph</span>
+    <script>
+        headingElement = document.getElementsByTagName("h1"); // Returns multiple elements
+        console.log(headingElement);
+        paraElement = document.getElementsByTagName("p"); // Returns multiple elements
+        console.log(paraElement);
+        paraClass = document.getElementsByClassName("para"); // Returns multiple elements
+        console.log(paraClass);
+        headingID = document.getElementById("heading"); // Returns signle element
+        console.log(headingID);
+        queryClass = document.querySelector(".para-2"); // Returns single element
+        console.log(queryClass);
+        queryID = document.querySelector("#heading"); // Returns single element
+        console.log(queryID);
+        queryElement = document.querySelector("p"); // Returns single element
+        console.log(queryElement);
+        multiplePara = document.querySelectorAll(".para"); // Returns multiple elements
+        console.log(multiplePara);
+    </script>
+</body>
+
+</html>

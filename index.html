@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JavaScript contains selectors: -->
+     <!-- 1) ID Selector - getElementByID-->
+     <!-- 2) Class Selector - getElementByClassName-->
+     <!-- 3) Element Selector - getElementByTagName-->
+     <!-- 4) Query Selector - querySelector-->
+     <!-- 5) Query Selector All - querySelectorAll-->
+    <div id="main"></div>
+    <div class="box"></div>
+    <p class="box"></p>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li class="item" id="Item3">
+            <ul>
+                <li>Child 1</li>
+                <li>Child 2</li>
+                <li>Child 3</li>
+                <li>Child 4</li>
+            </ul>
+        </li>
+        <li class="item">Item 5</li>
+    </ol>
+    <p>This is a <span>paragraph</span></p>
+    <script>
+        mainId = document.getElementById("main");
+        mainId.innerHTML = "Main Div has been changed using DOM";
+        mainId.style.color = "blue";
+        mainId.style.fontSize = "40px";
+        mainId.style.backgroundColor = "yellow";
+        // console.log(mainId.innerHTML);
+        boxClass = document.getElementsByClassName("box");
+        boxClass[0].style.border = "10px solid brown";
+        boxClass[0].style.height = "100px";
+        boxClass[0].style.width = "100px";
+        boxClass[1].style.border = "10px solid blue";
+        boxClass[1].style.height = "100px";
+        boxClass[1].style.width = "100px";
+        spanElement = document.getElementsByTagName("span");
+        spanElement[0].style.color = "red";
+        listItem = document.getElementsByTagName("li");
+        console.log(listItem);
+        listItem[2].style.color = "darkblue";
+        listItem[2].style.fontSize = "20px";
+        listItem[2].style.fontWeight = "bold";
+        item = document.querySelector(".item");
+        item.style.backgroundColor = "Orange";
+        items = document.querySelectorAll("li.item");
+        items[1].style.backgroundColor = "Yellow";
+    </script>
+</body>
+</html>
